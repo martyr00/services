@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block index %}
+  	<!-- Карточки -->
+	{% include 'price.html' %}
+    <img src="{% static 'img/first_img.jpeg' %}">
+    <img src="{% static 'img/second_img.jpg' %}">
+{% endblock %}
