@@ -3,6 +3,30 @@
 {% block index %}
   	<!-- Карточки -->
 	{% include 'price.html' %}
-    <img src="{% static 'img/first_img.jpeg' %}">
-    <img src="{% static 'img/second_img.jpg' %}">
+    {% include 'carusel.html' %}
+    <section>
+  		<div class="container class_form">
+  			<h1 class="text-3">Leave a request and get a service</h1>
+  			<div class="row justify-content-center">
+  			<form action="{% url 'thanks' %}" method="POST" style="width: 50%;">
+				{% csrf_token %}
+			  <div class="form-group row">
+			    <label for="inputEmail3" class="col-sm-2 col-form-label">Name</label><br>
+				  {{ form.name }}
+			    <div class="">
+			    </div>
+			  </div>
+			  <div class="form-group row">
+			    <label for="inputEmail3" class="col-sm-2 col-form-label">Phone</label><br>
+				  {{ form.phone }}
+			    <div class="">
+			    </div>
+			  </div>
+			  <div style="float: right;" class="form-group row">
+			      <button type="submit" class="btn btn-success">SUBMIT YOUR APPLICATION</button>
+			  </div>
+			</form>
+			</div>
+  		</div>
+  	</section>
 {% endblock %}

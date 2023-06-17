@@ -17,9 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from crm.views import first_page
+from crm.views import first_page, thx_page
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', first_page)
+    path('', first_page),
+    path('thanks/', thx_page, name='thanks'),
 ]
